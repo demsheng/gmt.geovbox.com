@@ -1,5 +1,5 @@
 ---
-weight: 5
+weight: 15
 bookFlatSection: true
 title: "4 剪裁图像"
 ---

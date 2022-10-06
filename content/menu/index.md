@@ -2,7 +2,9 @@
 headless: true
 ---
 
-- [**0 GMT安装配置**]({{< relref "/docs/install_gmt" >}})
+- [**GMT安装配置**]({{< relref "/docs/install_gmt" >}})
+- [**绘制第一张图**]({{< relref "/docs/gmt_first" >}})
+- [**Bash命令基础**]({{< relref "/docs/gmt_bash" >}})
 - [**1 MapGIS安装**]({{< relref "/docs/install" >}})
 - [**2 格式转换**]({{< relref "/docs/format_conversion" >}})
 - [**3 校正图像**]({{< relref "/docs/geometric_correction" >}})

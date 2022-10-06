@@ -10,5 +10,5 @@
 - 下载运行
     ```
     git clone https://github.com/demsheng/gmt.geovbox.com.git
-    hugo server --minify
+     ../../bin/hugo68.exe server --minify
     ```

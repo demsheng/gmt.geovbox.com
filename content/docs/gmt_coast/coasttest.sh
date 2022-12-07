@@ -1,14 +1,3 @@
----
-weight: 4
-bookFlatSection: true
-title: "coast绘制海岸线"
----
-
-## coast绘制海岸线
-
-执行以下脚本： `./coasttest.sh`
-
-```
 #!/usr/bin/env bash
 # GMT modern mode bash template
 # Date:    2019-09-10T00:44:39
@@ -24,13 +13,3 @@ gmt begin coasttest png,pdf
     #-Ba40f20  意思是以40度为标注间隔，20度为刻度间隔，绘制坐标轴
 gmt end show
   
-```
-
-
-待脚本执行完成后，工作目录中将生成  png 格式的图片文件，双击打开将看到如下图所示的图片。
-
-![](./coasttest.png)
-
-{{< hint warning>}}
-- 参考: https://docs.gmt-china.org/6.4/module/coast/
-{{< /hint >}}

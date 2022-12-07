@@ -12,3 +12,6 @@
     git clone https://github.com/demsheng/gmt.geovbox.com.git
     ../../bin/hugo68.exe server --minify
     ```
+- 主题
+
+ref: https://github.com/alex-shpak/hugo-book

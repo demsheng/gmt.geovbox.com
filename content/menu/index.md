@@ -7,6 +7,8 @@ headless: true
 - [**Bash命令基础**]({{< relref "/docs/gmt_bash" >}})
 - [**coast绘制海岸线**]({{< relref "/docs/gmt_coast" >}})
 - [**plot画符号**]({{< relref "/docs/gmt_plot" >}})
+- [**grdimage绘制全球地形起伏数据**]({{< relref "/docs/gmt_grdimage" >}})
+
 
 <br />
 

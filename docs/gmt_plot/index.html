@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.68.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="plot画符号 要绘制符号，必须要有符号的经纬度坐标。
+以下面坐标点为例 :
+   经度 纬度    104.39 29.90 13.14 52.50 19.99 -34.52 -77.15 38.89 -52.47 -31.62 150.36 -33.79 76.22 -69.22 下面的例子中，我们首先使用 UNIX 下的 cat 命令将数据写入到文件 stations.txt 中，然后使用 coast 模块绘制了一张底图，并使用 plot 模块绘制输入文件 stations.txt 中的数据。
+下面的几行代码的作用是将两个 EOF 中间的三行数据保存到文件 stations.txt 中:
+cat &gt; stations.txt &lt;&lt; EOF 104.39 29.90 13.14 52.50 19.99 -34.52 -77.15 38.89 -52.47 -31.62 150.36 -33.79 76.22 -69.22 EOF 下面的脚本中，采用 plot 模块绘制 stations.txt 给出的坐标点，并给 plot 添加了 -St0.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="plot画符号" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://gmt.geovbox.com/docs/gmt_plot/" />
+
+<title>plot画符号 | 地图学与计算机制图</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="/en.search.min.cabbcac5b4898f14c521ef1f8654f3246a10c3dd1632377494c60903084eaac9.js" integrity="sha256-yrvKxbSJjxTFIe8fhlTzJGoQw90WMjd0lMYJAwhOqsk="></script>
+<link rel="alternate" type="application/rss+xml" href="https://gmt.geovbox.com/docs/gmt_plot/index.xml" title="地图学与计算机制图" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>地图学与计算机制图</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/install_gmt/" class="">GMT安装配置</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_first/" class="">绘制第一张图</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_bash/" class="">Bash 编程基础</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_coast/" class="">coast绘制海岸线</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_plot/" class=" active">plot画符号</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_grdimage/" class="">grdimage绘制全球地形起伏数据</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        作业
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>plot画符号</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#plot画符号">plot画符号</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="plot画符号">plot画符号</h2>
+<p>要绘制符号，必须要有符号的经纬度坐标。</p>
+<p>以下面坐标点为例 :</p>
+<table>
+<thead>
+<tr>
+<th>经度</th>
+<th>纬度</th>
+</tr>
+</thead>
+</table>
+<pre><code>104.39   29.90
+ 13.14   52.50
+ 19.99  -34.52
+-77.15   38.89 
+-52.47  -31.62
+150.36  -33.79
+ 76.22  -69.22
+</code></pre><p>下面的例子中，我们首先使用 UNIX 下的 cat 命令将数据写入到文件 stations.txt 中，然后使用 coast 模块绘制了一张底图，并使用 plot 模块绘制输入文件 stations.txt 中的数据。</p>
+<p>下面的几行代码的作用是将两个 EOF 中间的三行数据保存到文件 stations.txt 中:</p>
+<pre><code>cat &gt; stations.txt &lt;&lt; EOF
+104.39   29.90
+ 13.14   52.50
+ 19.99  -34.52
+-77.15   38.89 
+-52.47  -31.62
+150.36  -33.79
+ 76.22  -69.22
+EOF
+</code></pre><p>下面的脚本中，采用 plot 模块绘制 stations.txt 给出的坐标点，并给 plot 添加了 <code>-St0.5c 选项，绘制三角形符号，外接圆直径为0.5c，</code>G` 设置符号的填充色为red</p>
+<pre><code>gmt begin figure1 png,pdf
+    gmt coast -JH15c -Rg -Baf -W0.1p -Cblue -Ggreen -Slightblue
+    gmt plot -St0.5c stations.txt -Gred
+gmt end show
+</code></pre><p>可以采用plot继续绘制坐标点：</p>
+<pre><code>cat &gt; epicenter.txt &lt;&lt; EOF
+130.72 32.78
+EOF
+
+gmt begin figure1 png,pdf
+    gmt coast -JH15c -Rg -Baf -W0.1p -Cblue -Ggreen -Slightblue
+    gmt plot -St0.5c stations.txt -Gred
+    gmt plot -Sa0.5c epicenter.txt -Gyellow -W1p,black
+gmt end show
+</code></pre><p>完整的绘图脚本如下:</p>
+<pre><code>#!/usr/bin/env bash
+# GMT modern mode bash template
+# Date:    2019-09-10T00:44:39
+# User:    seisman
+# Purpose: Purpose of this script
+export GMT_SESSION_NAME=$$  # Set a unique session name
+
+cat &gt; stations.txt &lt;&lt; EOF
+104.39   29.90
+ 13.14   52.50
+ 19.99  -34.52
+-77.15   38.89 
+-52.47  -31.62
+150.36  -33.79
+ 76.22  -69.22
+EOF
+
+cat &gt; epicenter.txt &lt;&lt; EOF
+130.72 32.78
+EOF
+
+gmt begin figure1 png,pdf
+    gmt coast -JH15c -Rg -Baf -W0.1p -Cblue -Ggreen -Slightblue
+    gmt plot -St0.5c stations.txt -Gred
+    gmt plot -Sa0.5c epicenter.txt -Gyellow -W1p,black
+gmt end show
+</code></pre><p><img src="./plottest.png" alt="" /></p>
+<ul>
+<li>-S  选项相对复杂，与不同的选项连用，或者后面接不同的参数，所需要的输入数据的格式也不同。不管是什么符号，至少都需要给定符号的位置，即X和Y是必须的:</li>
+</ul>
+<pre><code>X   Y
+</code></pre><blockquote class="book-hint warning">
+  <ul>
+<li>参考: <a href="https://docs.gmt-china.org/6.4/module/plot/">https://docs.gmt-china.org/6.4/module/plot/</a></li>
+</ul>
+</blockquote>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#plot画符号">plot画符号</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

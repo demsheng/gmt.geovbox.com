@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.68.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="绘制第一张图   启动bash，运行GMT
+进入工作目录 G:\MyProgram\gmt\1 ，右键 Git Bash Here , 进入 bash 输入 git ， 你将看到 GMT 的欢迎界面信息，类似于：
+sheng@cslaptop MINGW64 /g/MyProgram/gmt/1 $ git usage: git [-v | --version] [-h | --help] [-C &lt;path&gt;] [-c &lt;name&gt;=&lt;value&gt;] [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path] [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare] [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;] [--super-prefix=&lt;path&gt;] [--config-env=&lt;name&gt;=&lt;envvar&gt;] &lt;command&gt; [&lt;args&gt;] These are common Git commands used in various situations: start a working area (see also: git help tutorial) clone Clone a repository into a new directory init Create an empty Git repository or reinitialize an existing one work on the current change (see also: git help everyday) add Add file contents to the index mv Move or rename a file, a directory, or a symlink restore Restore working tree files rm Remove files from the working tree and from the index examine the history and state (see also: git help revisions) bisect Use binary search to find the commit that introduced a bug diff Show changes between commits, commit and working tree, etc grep Print lines matching a pattern log Show commit logs show Show various types of objects status Show the working tree status grow, mark and tweak your common history branch List, create, or delete branches commit Record changes to the repository merge Join two or more development histories together rebase Reapply commits on top of another base tip reset Reset current HEAD to the specified state switch Switch branches tag Create, list, delete or verify a tag object signed with GPG collaborate (see also: git help workflows) fetch Download objects and refs from another repository pull Fetch from and integrate with another repository or a local branch push Update remote refs along with associated objects &#39;git help -a&#39; and &#39;git help -g&#39; list available subcommands and some concept guides.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="绘制第一张图" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://gmt.geovbox.com/docs/gmt_first/" />
+
+<title>绘制第一张图 | 地图学与计算机制图</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="/en.search.min.cabbcac5b4898f14c521ef1f8654f3246a10c3dd1632377494c60903084eaac9.js" integrity="sha256-yrvKxbSJjxTFIe8fhlTzJGoQw90WMjd0lMYJAwhOqsk="></script>
+<link rel="alternate" type="application/rss+xml" href="https://gmt.geovbox.com/docs/gmt_first/index.xml" title="地图学与计算机制图" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>地图学与计算机制图</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/install_gmt/" class="">GMT安装配置</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_first/" class=" active">绘制第一张图</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_bash/" class="">Bash 编程基础</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_coast/" class="">coast绘制海岸线</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_plot/" class="">plot画符号</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_grdimage/" class="">grdimage绘制全球地形起伏数据</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        作业
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>绘制第一张图</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#绘制第一张图">绘制第一张图</a></li>
+    <li><a href="#gmt-命令初探">GMT 命令初探</a></li>
+    <li><a href="#输出pdf和png格式图片">输出pdf和png格式图片</a></li>
+    <li><a href="#gmt-命令格式">GMT 命令格式</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="绘制第一张图">绘制第一张图</h2>
+<ol>
+<li>
+<p>启动bash，运行GMT</p>
+<p>进入工作目录 <code>G:\MyProgram\gmt\1</code> ，右键 Git Bash Here , 进入 bash  输入 <code>git</code> ， 你将看到 GMT 的欢迎界面信息，类似于：</p>
+<pre><code>sheng@cslaptop MINGW64 /g/MyProgram/gmt/1
+$ git
+usage: git [-v | --version] [-h | --help] [-C &lt;path&gt;] [-c &lt;name&gt;=&lt;value&gt;]
+        [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]
+        [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+        [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]
+        [--super-prefix=&lt;path&gt;] [--config-env=&lt;name&gt;=&lt;envvar&gt;]
+        &lt;command&gt; [&lt;args&gt;]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+clone     Clone a repository into a new directory
+init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+add       Add file contents to the index
+mv        Move or rename a file, a directory, or a symlink
+restore   Restore working tree files
+rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+bisect    Use binary search to find the commit that introduced a bug
+diff      Show changes between commits, commit and working tree, etc
+grep      Print lines matching a pattern
+log       Show commit logs
+show      Show various types of objects
+status    Show the working tree status
+
+grow, mark and tweak your common history
+branch    List, create, or delete branches
+commit    Record changes to the repository
+merge     Join two or more development histories together
+rebase    Reapply commits on top of another base tip
+reset     Reset current HEAD to the specified state
+switch    Switch branches
+tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+fetch     Download objects and refs from another repository
+pull      Fetch from and integrate with another repository or a local branch
+push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help &lt;command&gt;' or 'git help &lt;concept&gt;'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+sheng@cslaptop MINGW64 /g/MyProgram/gmt/1
+$
+
+</code></pre></li>
+<li>
+<p>生成脚本模板
+继续在bash中敲入:</p>
+<pre><code>gmt --new-script &gt; myplot.sh
+</code></pre><p>该命令会在当前目录生成一个 GMT 模板脚本，并保存到 Bash 脚本文件 myplot.sh 中。</p>
+</li>
+<li>
+<p>查看并编辑脚本文件
+Bash 脚本文件是一个纯文本文件，可以直接用文本编辑器打开。
+采用 Notepad++ 双击打开 <code>myplot.sh</code> 后会看到如下内容:</p>
+<pre><code>#!/usr/bin/env bash
+# GMT modern mode bash template
+# Date:    2019-09-10T00:44:39
+# User:    seisman
+# Purpose: Purpose of this script
+export GMT_SESSION_NAME=$$  # Set a unique session name
+gmt begin figurename
+    # Place modern session commands here
+gmt end show
+</code></pre><p>其中，以 # 开头的行尾注释行，export GMT_SESSION_NAME=$$ 这一行属于高级用法，可以忽略。因而核心内容只有两行，即 gmt begin 和 gmt end 这两行。
+编辑脚本，在 gmt begin 和 gmt end 中间添加 GMT 命令，将脚本修改如下:</p>
+<pre><code>#!/usr/bin/env bash
+# GMT modern mode bash template
+# Date:    2019-09-10T00:44:39
+# User:    seisman
+# Purpose: Purpose of this script
+export GMT_SESSION_NAME=$$  # Set a unique session name
+gmt begin figurename
+    gmt coast -Rg -JH15c -Gpurple -Baf -B+t&quot;My First Plot&quot;
+gmt end show
+</code></pre><p>编辑完成后记得保存文件。</p>
+</li>
+<li>
+<p>执行脚本以绘图</p>
+<p>回到bash，运行 Bash 脚本:</p>
+<pre><code>bash myplot.sh
+</code></pre><p>待脚本执行完成后，工作目录  <code>G:\MyProgram\gmt\1</code> 中将生成 PDF 格式的图片文件，双击打开将看到如下图所示的图片。</p>
+<p><img src="./1/figurename.png" alt="" /></p>
+</li>
+</ol>
+<p>以上就是运行 GMT 脚本的基本流程，即：</p>
+<ul>
+<li>生成脚本模板</li>
+<li>编辑脚本，添加 GMT 绘图命令</li>
+<li>运行脚本并查看绘图效果</li>
+</ul>
+<blockquote class="book-hint warning">
+  <ul>
+<li>参考: <a href="https://docs.gmt-china.org/6.4/tutorial/get-started/linux/">https://docs.gmt-china.org/6.4/tutorial/get-started/linux/</a></li>
+</ul>
+</blockquote>
+
+<h2 id="gmt-命令初探">GMT 命令初探</h2>
+<p>GMT 在绘图时，总是以 begin 开始，并以 end 结束。所有的绘图命令都放在 begin 与 end 之间，而非绘图命令可以放在任何地方。</p>
+<p>在前一节中我们使用  <code>gmt --new-script &gt; myplot.sh</code> 命令生成一个绘图模板。忽略掉绘图模板中的注释语句，一个最最基本的 GMT 绘图脚本的模板是:</p>
+<pre><code>gmt begin
+#
+# 其它命令，包括 GMT 绘图命令、数据处理命令以及其它 UNIX 命令
+#
+gmt end show
+</code></pre><p>绘图时我们通常需要指定图片文件名和图片格式，因而更实用的绘图脚本模板为:</p>
+<pre><code>gmt begin FigureName pdf
+#
+# 其它命令，包括 GMT 绘图命令、数据处理命令以及其它 UNIX 命令
+#
+gmt end show
+</code></pre><ul>
+<li>FigureName 指定了要生成的图片文件名，你可以指定任意文件名，但最好避免在文件名中使用特殊符号和空格。若不给定文件名，则默认文件名为 gmtsession</li>
+<li>紧跟在图片文件名后的 pdf 指定了要生成的图片格式（若不指定格式，则默认图片格式为 PDF）。GMT 支持多种图片格式，pdf、ps、eps、jpg、png、bmp 等等。若想要一次性生成多种格式的图片，则可以使用逗号将多种格式连接起来，如 pdf,png 会同时生成 PDF 和 PNG 格式的图片</li>
+<li>gmt end 后面加上 show，则 GMT 会在绘图完成后，使用系统自带的阅读器软件自动打开生成的图片文件，供用户预览绘图效果</li>
+</ul>
+<h2 id="输出pdf和png格式图片">输出pdf和png格式图片</h2>
+<p>在 GMT 绘图脚本模板的基础上，向 begin 和 end 语句中间加入正确的 GMT 绘图命令，即可实现用 GMT 绘图。</p>
+<p>下面的脚本使用 coast 绘制了一张全球地图。执行该脚本，会生成文件名为 GlobalMap、格式为 PNG 和 PDF 的图片文件，并且 GMT 会在绘图结束后自动打开生成的图片文件。</p>
+<pre><code>gmt begin GlobalMap pdf,png
+    gmt coast -Rg -JH15c -Gpurple -Baf -B+t&quot;My First Plot&quot;
+gmt end show
+</code></pre><p><img src="./2/GlobalMap.png" alt="" /></p>
+<h2 id="gmt-命令格式">GMT 命令格式</h2>
+<p>一个 GMT 命令通常由 gmt + 模块名 + 选项 + 参数 构成。比如上面的例子中:</p>
+<pre><code>gmt coast -Rg -JH15c -Gpurple -Baf -B+t&quot;My First Plot&quot;
+</code></pre><ul>
+<li>所有的 GMT 命令都需要以 <strong>gmt</strong> 开头</li>
+<li><strong>coast</strong> 是模块名，这个模块可以用于绘制海岸线</li>
+<li><strong>-R</strong>、<strong>-J</strong>、<strong>-G</strong>、<strong>-B</strong>\ 等以 <strong>-</strong> 开头的是模块的选项</li>
+<li><strong>-Baf</strong> 中 <strong>af</strong> 是 <strong>-B</strong> 选项的参数</li>
+<li><strong>-B+t</strong>\ &ldquo;My First Plot&rdquo; 中 <strong>+t</strong> 为 <strong>-B</strong> 的
+子选项，&ldquo;My First Plot&rdquo; 则是子选项 <strong>+t</strong> 的参数</li>
+</ul>
+<p>关于 GMT 命令的几点说明：</p>
+<ul>
+<li>若模块名以 <strong>gmt</strong> 开头，则模块名中的 <strong>gmt</strong> 可省略。
+比如 <strong>gmt gmtset xxx xxx</strong> 可简写为 <strong>gmt set xxx xxx</strong></li>
+<li>模块名、选项等均区分大小写</li>
+<li>选项以 <strong>-</strong> 开头，后接\ <strong>单个字符</strong>\ 表示某个选项，字符后接选项的参数以及子选项</li>
+<li>子选项以 <strong>+</strong> 开头，后接\ <strong>单个字符</strong>\ 以及子选项的参数</li>
+<li>不以 <strong>-</strong> 开头的参数，通常都会被当做文件，GMT 会尝试去读取</li>
+<li>各选项间以空格分隔，选项内部不能有空格。选项内部的字符串中若存在空格，
+在 Bash 下可以使用单引号或双引号括起来。</li>
+</ul>
+<blockquote class="book-hint warning">
+  <ul>
+<li>参考: <a href="https://docs.gmt-china.org/6.4/tutorial/commands">https://docs.gmt-china.org/6.4/tutorial/commands</a></li>
+</ul>
+</blockquote>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#绘制第一张图">绘制第一张图</a></li>
+    <li><a href="#gmt-命令初探">GMT 命令初探</a></li>
+    <li><a href="#输出pdf和png格式图片">输出pdf和png格式图片</a></li>
+    <li><a href="#gmt-命令格式">GMT 命令格式</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

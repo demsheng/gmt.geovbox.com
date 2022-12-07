@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.68.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GMT安装配置(Windows系统) I. 安装 GMT   下载 GMT 64 位安装包：gmt-6.4.0-win64.exe
+  安装 GMT
+双击安装包即可安装。在 “Choose components” 页面应勾选全部选项。
+  测试安装
+安装完成后，点击“开始”→“所有程序”→“附件”→“命令提示符”以启动 CMD。 在 CMD 窗口中敲入 gmt --version，若出现 GMT 版本号则表示 GMT 安装成功。
+  II. 安装Bash脚本工具 Git for Windows 下载地址： https://git-scm.com/download/win/
+Git for Windows 为 Windows 用户提供了 Bash 以及 Linux 的常用命令，方便用户在 Windows 下运行 Bash 脚本。
+III. 错误解决办法  安装过程中出现错误参考:: https://docs.gmt-china.org/6.4/install/windows/ 如果 GMT 和 git 无法下载，可在百度网下载  链接： https://pan.baidu.com/s/1x7ev4zYLIdf9mDWWaaKY4Q?pwd=zdem 提取码：zdem     ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="GMT安装配置" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://gmt.geovbox.com/docs/install_gmt/" />
+
+<title>GMT安装配置 | 地图学与计算机制图</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="/en.search.min.cabbcac5b4898f14c521ef1f8654f3246a10c3dd1632377494c60903084eaac9.js" integrity="sha256-yrvKxbSJjxTFIe8fhlTzJGoQw90WMjd0lMYJAwhOqsk="></script>
+<link rel="alternate" type="application/rss+xml" href="https://gmt.geovbox.com/docs/install_gmt/index.xml" title="地图学与计算机制图" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>地图学与计算机制图</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/install_gmt/" class=" active">GMT安装配置</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_first/" class="">绘制第一张图</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_bash/" class="">Bash 编程基础</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_coast/" class="">coast绘制海岸线</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_plot/" class="">plot画符号</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://gmt.geovbox.com/docs/gmt_grdimage/" class="">grdimage绘制全球地形起伏数据</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        作业
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>GMT安装配置</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#i-安装-gmt">I. 安装 GMT</a></li>
+    <li><a href="#ii-安装bash脚本工具">II. 安装Bash脚本工具</a></li>
+    <li><a href="#iii-错误解决办法">III. 错误解决办法</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="gmt安装配置windows系统">GMT安装配置(Windows系统)</h1>
+<h2 id="i-安装-gmt">I. 安装 GMT</h2>
+<ol>
+<li>
+<p>下载 GMT 64 位安装包：<a href="http://mirrors.ustc.edu.cn/gmt/bin/gmt-6.4.0-win64.exe">gmt-6.4.0-win64.exe</a></p>
+</li>
+<li>
+<p>安装 GMT</p>
+<p>双击安装包即可安装。在 “Choose components” 页面应勾选全部选项。</p>
+</li>
+<li>
+<p>测试安装</p>
+<p>安装完成后，点击“开始”→“所有程序”→“附件”→“命令提示符”以启动 CMD。
+在 CMD 窗口中敲入 <code>gmt --version</code>，若出现 GMT 版本号则表示 GMT 安装成功。</p>
+</li>
+</ol>
+<h2 id="ii-安装bash脚本工具">II. 安装Bash脚本工具</h2>
+<p><code>Git for Windows</code> 下载地址： <a href="https://git-scm.com/download/win/">https://git-scm.com/download/win/</a></p>
+<p><code>Git for Windows</code> 为 Windows 用户提供了 Bash 以及 Linux 的常用命令，方便用户在 Windows 下运行 Bash 脚本。</p>
+<h2 id="iii-错误解决办法">III. 错误解决办法</h2>
+<blockquote class="book-hint warning">
+  <ul>
+<li>安装过程中出现错误参考:: <a href="https://docs.gmt-china.org/6.4/install/windows/">https://docs.gmt-china.org/6.4/install/windows/</a></li>
+<li>如果 <code>GMT</code> 和 <code>git</code> 无法下载，可在百度网下载
+<ul>
+<li>链接： <a href="https://pan.baidu.com/s/1x7ev4zYLIdf9mDWWaaKY4Q?pwd=zdem">https://pan.baidu.com/s/1x7ev4zYLIdf9mDWWaaKY4Q?pwd=zdem</a></li>
+<li>提取码：<code>zdem</code></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#i-安装-gmt">I. 安装 GMT</a></li>
+    <li><a href="#ii-安装bash脚本工具">II. 安装Bash脚本工具</a></li>
+    <li><a href="#iii-错误解决办法">III. 错误解决办法</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

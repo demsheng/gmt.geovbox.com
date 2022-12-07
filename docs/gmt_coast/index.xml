@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coast绘制海岸线 on 地图学与计算机制图</title>
+    <link>https://gmt.geovbox.com/docs/gmt_coast/</link>
+    <description>Recent content in coast绘制海岸线 on 地图学与计算机制图</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://gmt.geovbox.com/docs/gmt_coast/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

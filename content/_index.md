@@ -19,6 +19,8 @@ type: docs
 
 ## MapGIS 6.7 矢量化图像流程
 
+MapGIS教程转到 https://mapgis.geovbox.com/
+
 1. 扫描获得tif格式图像
 1. 格式转换 tif转msi
 1. 校正图像
